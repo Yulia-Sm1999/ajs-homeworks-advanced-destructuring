@@ -30,6 +30,6 @@ test('should show attacks', () => {
       },
     ],
   };
-  const result = showAttacks(givenArray.special);
+  const result = showAttacks(givenArray);
   expect(result).toEqual(expected);
 });

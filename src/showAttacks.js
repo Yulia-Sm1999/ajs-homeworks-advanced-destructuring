@@ -1,6 +1,7 @@
-export default function showAttacks(givenArrOfObj) {
+export default function showAttacks(object) {
+  const arrayOfAttacks = object.special;
   const result = [];
-  givenArrOfObj.forEach((obj) => {
+  arrayOfAttacks.forEach((obj) => {
     const {
       id, name, icon, description = 'Описание недоступно',
     } = obj;
