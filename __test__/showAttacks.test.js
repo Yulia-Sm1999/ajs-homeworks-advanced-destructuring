@@ -9,7 +9,7 @@ test('should show attacks', () => {
       id: 9, name: 'Нокаутирующий удар', icon: 'http://...', description: 'Описание недоступно',
     },
   ];
-  const givenArray = {
+  const givenObject = {
     name: 'Лучник',
     type: 'Bowman',
     health: 50,
@@ -30,6 +30,20 @@ test('should show attacks', () => {
       },
     ],
   };
-  const result = showAttacks(givenArray);
+  const result = showAttacks(givenObject);
+  expect(result).toEqual(expected);
+});
+
+test('should show no attacks', () => {
+  const expected = 'This player have no attacks!';
+  const givenObject = {
+    name: 'Лучник',
+    type: 'Bowman',
+    health: 50,
+    level: 3,
+    attack: 40,
+    defence: 10,
+  };
+  const result = showAttacks(givenObject);
   expect(result).toEqual(expected);
 });
